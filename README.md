@@ -9,9 +9,12 @@ CORSPoc是一个用于CORS跨域漏洞检测的python工具,它目前支持直�
 # 安装
 
  - clone到本地
-	git clone https://github.com/w3c2sh5b99phon1/CORSPoc.git
+
+`git clone https://github.com/w3c2sh5b99phon1/CORSPoc.git`
+
  - 安装依赖关系
-	pip install -r requirements.txt
+
+`pip install -r requirements.txt`
 
 CORSPoc依赖于requests,PrettyTable,docopt.
 
