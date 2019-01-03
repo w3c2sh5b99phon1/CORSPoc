@@ -57,12 +57,15 @@ def file_filter(url,file,cookies,date):
     x.padding_width = 10
     if file == None:
         try:
-            print("开始请求"+url)
+            print("开始请求："+url)
             result = cors_check(url,cookies,date)
             x.add_row([url,result])
             print(x)
         except:
             print("url请求错误，请手动测试")
+            result = "url请求错误,请手动测试"
+            x.add_row([url,result])
+            print(x)
     else:
         f = open(file,'r')
         line = f.readline()
@@ -74,6 +77,8 @@ def file_filter(url,file,cookies,date):
                     x.add_row([line,result])
                 except:
                     print("url请求错误，请手动测试") 
+                    result = "url请求错误,请手动测试"
+                    x.add_row([line,result])
             line = f.readline()
         f.close()
         print(x)
